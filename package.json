@@ -1,0 +1,32 @@
+{
+  "name": "wit.ai-http-api",
+  "version": "1.0.0",
+  "description": "A promise / callback API for the NLP platform wit.ai.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nop0x/wit.ai-http-api.git"
+  },
+  "keywords": [
+    "wit.ai"
+  ],
+  "author": "Marvin Kilp (Nop0x)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nop0x/wit.ai-http-api/issues"
+  },
+  "homepage": "https://github.com/Nop0x/wit.ai-http-api#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "joi": "^14.0.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
