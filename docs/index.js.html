@@ -1,4 +1,47 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>index.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="WitHttpApi.html">WitHttpApi</a><ul class='methods'><li data-type='method'><a href="WitHttpApi.html#.deleteEntityById">deleteEntityById</a></li><li data-type='method'><a href="WitHttpApi.html#.deleteEntityValue">deleteEntityValue</a></li><li data-type='method'><a href="WitHttpApi.html#.deleteEntityValueExpression">deleteEntityValueExpression</a></li><li data-type='method'><a href="WitHttpApi.html#.getEntities">getEntities</a></li><li data-type='method'><a href="WitHttpApi.html#.getEntityById">getEntityById</a></li><li data-type='method'><a href="WitHttpApi.html#.postEntities">postEntities</a></li><li data-type='method'><a href="WitHttpApi.html#.postEntityValueExpression">postEntityValueExpression</a></li><li data-type='method'><a href="WitHttpApi.html#.postEntityValues">postEntityValues</a></li><li data-type='method'><a href="WitHttpApi.html#.putEntityById">putEntityById</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">index.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 /**
  * @typedef WitError
  * @property {String} error The error message.
@@ -41,14 +84,14 @@ function WitHttpApi(witAccessToken) {
 
 /**
  * @memberOf WitHttpApi
- * @type {{getEntities: (function(requestCallback=): (Promise<any>|Promise)), postEntities: (function(Object, requestCallback=): (Promise<any>|Promise)), getEntityById: (function(String, requestCallback=): Promise), putEntityById: (function(String, Object, requestCallback=): Promise), postEntityValues: (function(String, Object, requestCallback=): Promise), deleteEntityValue: (function(String, String, requestCallback=): Promise), postEntityValueExpression: (function(String, String, Object, requestCallback=): Promise), deleteEntityValueExpression: (function(String, String, String, requestCallback=): Promise)}}
+ * @type {{getEntities: (function(requestCallback=): (Promise&lt;any>|Promise)), postEntities: (function(Object, requestCallback=): (Promise&lt;any>|Promise)), getEntityById: (function(String, requestCallback=): Promise), putEntityById: (function(String, Object, requestCallback=): Promise), postEntityValues: (function(String, Object, requestCallback=): Promise), deleteEntityValue: (function(String, String, requestCallback=): Promise), postEntityValueExpression: (function(String, String, Object, requestCallback=): Promise), deleteEntityValueExpression: (function(String, String, String, requestCallback=): Promise)}}
  */
 WitHttpApi.prototype.entities = {
   /**
    * Method to get all entities as an array.
    * @memberOf WitHttpApi
    * @param {requestCallback} [callback] An optional callback.
-   * @returns {Promise<any | WitError>|Promise} A promise that will resolve to the result.
+   * @returns {Promise&lt;any | WitError>|Promise} A promise that will resolve to the result.
    */
   getEntities: (callback) => {
     return require('./routes/entities/getEntities')(
@@ -60,7 +103,7 @@ WitHttpApi.prototype.entities = {
    * @memberOf WitHttpApi
    * @param {Object} params The params, which are passed to the Wit.ai API.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a Promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a Promise.
    */
   postEntities: (params, callback) => {
     return require('./routes/entities/postEntities')(
@@ -72,7 +115,7 @@ WitHttpApi.prototype.entities = {
    * @memberOf WitHttpApi
    * @param {String} id The id of the entity to fetch.
    * @param {requestCallback} [callback] Optinal callback.
-   * @returns {Promise<any | WitError>} The result of the call as a Promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a Promise.
    */
   getEntityById: (id, callback) => {
     return require('./routes/entities/getEntityById')(
@@ -85,7 +128,7 @@ WitHttpApi.prototype.entities = {
    * @param {String} id The id of the entity.
    * @param {Object} params A object with the needed arguments for the update.
    * @param {requestCallback} [callback] Optional callback
-   * @returns {Promise<any | WitError>} The result of the call as a Promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a Promise.
    */
   putEntityById: (id, params, callback) => {
     return require('./routes/entities/putEntityById')(
@@ -98,7 +141,7 @@ WitHttpApi.prototype.entities = {
    * @param {String} id The id of the entity.
    * @param {Object} params The wit.ai parameters.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a promise.
    */
   postEntityValues: (id, params, callback) => {
     return require('./routes/entities/postEntityValue')(
@@ -111,7 +154,7 @@ WitHttpApi.prototype.entities = {
    * @param {String} eId The id of the entity.
    * @param {String} vId The id of the value.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a promise.
    */
   deleteEntityValue: (eId, vId, callback) => {
     return require('./routes/entities/deleteEntityValue')(
@@ -125,7 +168,7 @@ WitHttpApi.prototype.entities = {
    * @param {String} vId The id of the entity.
    * @param {Object} params The wit.ai api parameters.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a promise.
    */
   postEntityValueExpression: (eId, vId, params, callback) => {
     return require('./routes/entities/postEntityValueExpression')(
@@ -139,7 +182,7 @@ WitHttpApi.prototype.entities = {
    * @param {String} vId The id of the value.
    * @param {String} exId The id of the expression.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a promise.
    */
   deleteEntityValueExpression: (eId, vId, exId, callback) => {
     return require('./routes/entities/deleteEntityValueExpression')(
@@ -151,7 +194,7 @@ WitHttpApi.prototype.entities = {
    * @memberOf WitHttpApi
    * @param {String} id The id of the entity.
    * @param {requestCallback} [callback] Optional callback.
-   * @returns {Promise<any | WitError>} The result of the call as a promise.
+   * @returns {Promise&lt;any | WitError>} The result of the call as a promise.
    */
   deleteEntityById: (id, callback) => {
     return require('./routes/entities/deleteEntityById')(
@@ -189,3 +232,26 @@ WitHttpApi.prototype.apps = {
 };
 
 module.exports = WitHttpApi;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Oct 29 2018 13:52:15 GMT+0100 (Mitteleuropäische Zeit) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+
+</body>
+</html>

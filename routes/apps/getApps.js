@@ -16,7 +16,7 @@
  */
 module.exports = (request, options, callback) => {
   return new Promise((resolve, reject) => {
-    options.uri = 'https://api.wit.ai/entities';
+    options.uri = 'https://api.wit.ai/apps?limit=500';
     options.method = 'GET';
     request(options)
       .then((data) => {
