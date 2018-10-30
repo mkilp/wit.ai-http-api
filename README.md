@@ -6,10 +6,10 @@ A promise / callback API for the NLP platform wit.ai.
 
 This library is aimed at people, which try to automate the creation and deployment of a wit.ai application.
 
---
+
 ## Installation
 `npm i --save wit.ai-http-api`
---
+
 ## Usage
 ###Initialization
 ```javascript
