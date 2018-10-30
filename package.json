@@ -1,6 +1,6 @@
 {
   "name": "wit.ai-http-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A promise / callback API for the NLP platform wit.ai.",
   "main": "index.js",
   "scripts": {
