@@ -11,6 +11,7 @@ This library is aimed at people, which try to automate the creation and deployme
 `npm i --save wit.ai-http-api`
 
 ## Usage
+
 ###Initialization
 ```javascript
 let WitAi = require('wit.ai-http-api');
@@ -18,7 +19,9 @@ let wit = new WitAi(process.env.WIT_TOKEN);
 ```
 
 ##Calllback Style
+
 ###Creating an app
+
 ```javascript
 let params = {name: 'MyAwesomeApp', lang: 'en', private: 'true', desc: 'Test'};
 wit.apps.postApp(params, (err, data) => {
@@ -36,8 +39,10 @@ wit.apps.postApp(params, (err, data) => {
   }
 })
 ```
+
 ##Promise support
 This library supports native promises.
+
 ###Creating an app
 ```javascript
 let params = {name: 'MyAwesomeApp', lang: 'en', private: 'true', desc: 'Test'};
@@ -47,6 +52,11 @@ try {
   throw e;
 }
 ```
+
+##API
+For a (semi) complete API documentation please refer to the 
+[Tests](https://github.com/Nop0x/wit.ai-http-api/tree/master/test) and the 
+[API docs](https://nop0x.github.io/wit.ai-http-api/).
 
 ##Parameters
 Currently the needed parameters are not documented.
