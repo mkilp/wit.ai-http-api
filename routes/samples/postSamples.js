@@ -1,17 +1,19 @@
 'use strict';
 const Joi = require('joi');
 
-const schema = Joi.object().keys({
-  text: Joi.string().required(),
-  entities: Joi.array().items(
-    Joi.object().keys({
-      entity: Joi.string().required(),
-      value: Joi.string().required(),
-      start: Joi.number().integer(),
-      end: Joi.number().integer(),
-    }),
-  ),
-});
+const schema = Joi.array().items(
+  Joi.object().keys({
+    text: Joi.string().required(),
+    entities: Joi.array().items(
+      Joi.object().keys({
+        entity: Joi.string().required(),
+        value: Joi.string().required(),
+        start: Joi.number().integer(),
+        end: Joi.number().integer(),
+      }),
+    ),
+  }),
+);
 /**
  * Method to post a new sample to wit.ai.
  * @param request The request library.
