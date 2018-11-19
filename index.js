@@ -188,4 +188,12 @@ WitHttpApi.prototype.apps = {
   },
 };
 
+WitHttpApi.prototype.samples = {
+  postSamples: (params, callback) => {
+    return require('./routes/samples/postSamples')(
+      request, options, params, callback,
+    );
+  },
+};
+
 module.exports = WitHttpApi;

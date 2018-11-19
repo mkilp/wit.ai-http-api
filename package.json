@@ -1,6 +1,6 @@
 {
   "name": "wit.ai-http-api",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A promise / callback API for the NLP platform wit.ai.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "wit.ai"
   ],
   "author": "Marvin Kilp (Nop0x)",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Nop0x/wit.ai-http-api/issues"
   },
